@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="apple-touch-icon" href="0.svg">
     <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
     <title>bug</title>
     <style>
@@ -47,6 +48,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+        }
+
+        .desc2 div span {
+            display: inline-block;
+            padding: 8px;
+            background-color: #000;
+            color: #fff;
         }
 
         .item.ani {
@@ -154,7 +163,8 @@
         </div>
         <div class="title desc2">
             <div>
-                지금까지<br>이런 뽑기는<br>없었다.
+                지금까지<br>이런 뽑기는<br>없었다. <br>
+                <span class='reset'>다시하기</span>
             </div>
         </div>
     </div>
@@ -182,6 +192,11 @@ $(".item").click(function() {
         $(this).children().attr('src', imageRamdom+'.svg')
         $(this).removeClass('ani')
     }, 1100);
+});
+
+$(".reset").click(function() {
+    ramdomArr = [1,2,3,4,5,6,7];
+    $('.item').children().attr('src', '0.svg')
 });
 
 </script>
