@@ -203,7 +203,9 @@
         </div>
     </div>
 </div>
-<embed hidden="true" src="test.wav" autostart="true">
+<audio id="test">
+    <source src="test.wav" type="audio/mpeg">
+</audio>
 <audio id="start">
     <source src="start.wav" type="audio/mpeg">
 </audio>
@@ -225,6 +227,8 @@ $(document).ready(function(){
             return false;
         });
     }
+
+    $('audio#test')[0].play()
 });
 
 
