@@ -178,6 +178,18 @@
         </div>
     </div>
 </div>
+<audio id="test">
+    <source src="test.wav" type="audio/mpeg">
+</audio>
+<audio id="start">
+    <source src="start.wav" type="audio/mpeg">
+</audio>
+<audio id="ooo">
+    <source src="ooo.wav" type="audio/mpeg">
+</audio>
+<audio id="xxx">
+    <source src="xxx.wav" type="audio/mpeg">
+</audio>
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -190,6 +202,8 @@ $(document).ready(function(){
             return false;
         });
     }
+
+    $('audio#test')[0].play()
 });
 
 var ramdomArr = [1,2,3,4,5,6,7];
@@ -211,6 +225,21 @@ $(".item").click(function() {
         }
 
         setTimeout(() => {
+            if (imageRamdom === 2
+            || imageRamdom === 4
+            || imageRamdom === 5) {
+                $('audio#start')[0].play()
+            }
+
+            if (imageRamdom === 6 || imageRamdom === 3) {
+                $('audio#ooo')[0].play()
+            }
+
+            if (imageRamdom === 1
+            || imageRamdom === 7) {
+                $('audio#xxx')[0].play()
+            }
+
             $(this).children().attr('src', imageRamdom+'.svg')
             $(this).removeClass('ani')
         }, 1100);
