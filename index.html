@@ -9,12 +9,24 @@
     <meta name="viewport" content = "width = device-width, initial-scale = 1.0, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
     <title>bug</title>
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .app {
+            height: calc(100% - 16px);
+            padding: 8px;
+            display: flex;
+        }
+
         body {
             background-color: #565f6a;
         }
         .container {
             display: flex;
             align-items: center;
+            align-content: center;
             flex-wrap: wrap;
             position: relative;
         }
